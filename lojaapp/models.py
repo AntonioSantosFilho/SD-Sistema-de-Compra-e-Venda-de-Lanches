@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User  # Supondo que você esteja utilizando o sistema de usuários padrão do Django.
+from django.contrib.auth.models import User  
 
 # Modelo para gerenciar informações básicas dos usuários e sua função como vendedor
 class Usuario(models.Model):
