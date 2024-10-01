@@ -14,7 +14,7 @@ class Usuario(models.Model):
 
 # Modelo que contém informações adicionais sobre vendedores, como localização e status
 class Vendedor(models.Model):
-    usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE)
+    usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE) #cascata para deletar o usuário
     localizacao = models.CharField(max_length=255)
     telefone = models.CharField(max_length=15)
     foto = models.ImageField(upload_to='vendedores/', blank=True, null=True)
@@ -56,7 +56,7 @@ class Avaliacao(models.Model):
     data_avaliacao = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f"Avaliação por {self.avaliador.nome} para {self.produto.nome}"
+        return f"Avaliação por {self.avaliador.nome} para o produto {self.produto.nome} do vendedor {self.produto.vendedor.usuarioNome}"
 
 # Modelo para gerenciar as mensagens trocadas entre vendedores e compradores
 class Chat(models.Model):

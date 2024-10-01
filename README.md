@@ -46,3 +46,11 @@ Com o ambiente virtual ativo, execute o comando a seguir para instalar as depend
 ```bash
 pip install -r requirements.txt
 ```
+
+### 4. Ligue o servidor
+
+Execute o seguinte comando para iniciar o servidor:
+
+```bash
+python manage.py runserver
+```
