@@ -9,11 +9,7 @@ else:
 
 # Application definition
 INSTALLED_APPS = [
-
-
-
-
-    
+    'django.contrib.humanize',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -21,38 +17,33 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
-    
-    
-    # required by all-auth
-
-
-
-    # providers all-auth
-        # https://django-allauth.readthedocs.io/en/latest/installation.html
-     
-        #'allauth.socialaccount.providers.instagram',
-        #'allauth.socialaccount.providers.apple',
-        #'allauth.socialaccount.providers.facebook',
-        #'allauth.socialaccount.providers.linkedin',
-        #'allauth.socialaccount.providers.twitter',
-    
-    # https://pypi.org/project/django-widget-tweaks/
-    # Tweak the form field rendering in templates, 
-    # not in python-level form definitions. Altering CSS classes and HTML attributes is supported.
-    'widget_tweaks',
-
     # Enable the inner home (home)   
-    'apps.enquetes',  
+    'apps.registro',  
 
 ]
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",  # Certifique-se de que a pasta "static" existe
-]
+AUTH_USER_MODEL = 'registro.Usuario'  # Substitua 'app' pelo nome do seu app
+
+LOGIN_REDIRECT_URL = '/login/'  # Redireciona para a página inicial, por exemplo
+LOGOUT_REDIRECT_URL = '/login/'  # Substitua pela URL desejada, como a página de login
 
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+}
+
 
 
 # configurações servem apenas para send_common (SMTP using DJango)
@@ -63,13 +54,6 @@ EMAIL_HOST_USER = 'no-reply@projetosd.com.br'
 EMAIL_HOST_PASSWORD = 'xxxxxxxxxx' 
 DEFAULT_FROM_EMAIL = 'no-reply@projetosd.com.br'
 DEFAULT_REPLY_TO = 'falecom@projetosd.com.br'
-
-LOGIN_REDIRECT_URL = '/'  # Página para redirecionar após login bem-sucedido
-LOGOUT_REDIRECT_URL = '/'  # Página para redirecionar após logout
-LOGIN_URL = '/accounts/login/'  # Página padrão de login (pode ser personalizada)
-
-
-STATIC_URL = '/static/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/

@@ -1,5 +1,5 @@
 Em .env.dev e .env.prod
-	- substituir as referências ao e-mail antoniofilho.ins@gmail.com
+	- substituir as referências ao e-mail jairsonrodrigues@gmail.com
 	- modificar a referência a SRC_DIR=
 
 Em todo o projeto

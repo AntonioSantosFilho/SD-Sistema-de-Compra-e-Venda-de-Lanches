@@ -11,11 +11,11 @@ SECRET_KEY = "X4hLwoSsPFdHQamfLcYo38iugUCd-HbZx4eNUTqrM3o"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = os.getenv("DEBUG", 'False').lower() in ('1', 'true', 't', 'yes', 'y')
-DEBUG = True
+DEBUG = 1
 
 # load production server from .env
-ALLOWED_HOSTS        = ['*']
-CSRF_TRUSTED_ORIGINS = ['*']
+ALLOWED_HOSTS        = ['distribulanche.com.br', 'www.distribulanche.com.br']
+CSRF_TRUSTED_ORIGINS = ['distribulanche.com.br', 'www.distribulanche.com.br']
 
 ACCOUNT_DEFAULT_HTTP_PROTOCOL='https'
 
@@ -102,7 +102,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "apps/templates")  # ROOT dir for template
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,7 +115,13 @@ TEMPLATES = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    #...
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
 
+
+]
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
@@ -139,7 +145,7 @@ DATABASES = {
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = '/code/staticfiles'
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
