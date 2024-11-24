@@ -1,7 +1,7 @@
 import base64
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
-from registro.models import Vendedor
+from .models import Vendedor
 from .forms import UsuarioCreationForm
 
 
@@ -44,7 +44,7 @@ def register(request):
             user = authenticate(request, email=email, password=password)
             if user:
                 login(request, user)
-                return redirect('home')
+                return redirect('/marketplace/lanches/')
     else:
         form = UsuarioCreationForm()
     return render(request, 'registration/register.html', {'form': form})
