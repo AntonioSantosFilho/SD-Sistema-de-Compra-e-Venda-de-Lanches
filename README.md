@@ -24,7 +24,7 @@
 
 
 ## 📑 Apresentação do Projeto
-<br><br><br><br>
+<br><br>
 <a href="https://github.com/AntonioSantosFilho/SD-Sistema-de-Compra-e-Venda-de-Lanches/blob/main/images.to.github/Distribulanche%20-%20Apresenta%C3%A7%C3%A3o%20projeto.pdf" target="_blank">
     <img src="https://img.shields.io/badge/Clique%20para%20Abrir%20a%20Apresentação-PDF-blue?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Ler Apresentação do projeto">
 </a>
