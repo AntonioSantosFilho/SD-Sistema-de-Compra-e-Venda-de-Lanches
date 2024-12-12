@@ -28,7 +28,7 @@
 <a href="https://github.com/AntonioSantosFilho/SD-Sistema-de-Compra-e-Venda-de-Lanches/blob/main/images.to.github/Distribulanche%20-%20Apresenta%C3%A7%C3%A3o%20projeto.pdf" target="_blank">
     <img src="https://img.shields.io/badge/Abrir%20Apresentação-PDF-blue?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Ler Apresentação do projeto">
 </a>
-
+<br><br>
 
 O **Distribulanche** é uma aplicação desenvolvida como parte da disciplina de **Sistemas Distribuídos** na **UNIVASF**. Ela foi projetada para conectar vendedores e compradores de lanches de maneira eficiente e organizada. 
 
