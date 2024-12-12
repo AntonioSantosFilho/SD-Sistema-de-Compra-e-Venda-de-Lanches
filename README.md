@@ -79,8 +79,8 @@ http://localhost:8000
 Projeto desenvolvido por estudantes da **UNIVASF** como parte da disciplina de **Sistemas Distribuídos**:
 
 - **[Antonio](https://github.com/seu-usuario)**
-- **[Andréa](https://github.com/outro-usuario)**
-- **[João Pedro](https://github.com/outro-usuario)**
+- **[Andréa](https://github.com/andrea-enginner)**
+- **[João Pedro](https://github.com/Sansaocarrasco)**
 ---
 
 ## 🛡️ **Licença**
