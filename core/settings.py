@@ -27,8 +27,8 @@ INSTALLED_APPS = [
 
 ]
 
-MERCADO_PAGO_PUBLIC_KEY = "APP_USR-efe243c4-1239-4235-8f41-8bfeeffbe523"
-MERCADO_PAGO_ACCESS_TOKEN = "APP_USR-2950190329009440-120114-f383923769d583cd9c714c610a3c40f0-1181482628"
+MERCADO_PAGO_PUBLIC_KEY = "SUA KEY"
+MERCADO_PAGO_ACCESS_TOKEN = "SEUA ACESS TOKEN"
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
@@ -69,8 +69,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'distribulanche@gmail.com' 
-EMAIL_HOST_PASSWORD = 'wrvfvkvbabzptczr'  # foi usado a senha gerada pelo google
+EMAIL_HOST_USER = 'SEUEMAIL@gmail.com' 
+EMAIL_HOST_PASSWORD = 'SUA SENHA DE APP'  # foi usado a senha gerada pelo google
 DEFAULT_FROM_EMAIL = 'no-reply@distribulanche.com.br'  
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # Internationalization
